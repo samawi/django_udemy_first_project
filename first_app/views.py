@@ -13,4 +13,13 @@ def index(request):
 
 def first_form(request):
     form = forms.FirstForm()
+
+    if (request.method == 'POST'):
+        form = forms.FirstForm(request.POST)
+        if form.is_valid():
+            print('Form is valid')
+            print('Name: %s' % form.cleaned_data['name'])
+            print('Email: %s' % form.cleaned_data['email'])
+            print('Text: %s' % form.cleaned_data['text'])
+
     return render(request, 'first_app/form.html', {'form': form})
