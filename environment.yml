@@ -1,0 +1,8 @@
+name: django-udemy
+channels:
+  - defaults
+dependencies:
+  - python=3.9.7
+  - django=3.2.5
+  - faker=8.8.1
+prefix: /home/mawan/miniconda3/envs/django-udemy
